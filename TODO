@@ -1,0 +1,16 @@
+* speed optimisations
+    - cache part of the word table in memory for 
+      faster insert and select lookups
+
+    - look to kfNgram
+
+* unicode support
+
+* GUI with query builder for the database
+
+* nested ngrams/discontinious ngrams
+
+* keyness statistics
+
+* windows installer
+
