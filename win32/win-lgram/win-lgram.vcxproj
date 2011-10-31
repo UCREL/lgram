@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DFF6CD9B-20F5-422C-BD9C-56BD57E61CB8}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>winlgram</RootNamespace>
+    <ProjectName>lgram</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\Documents and Settings\belle1\Desktop\lgram-0.01\win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Documents and Settings\belle1\Desktop\lgram-0.01\win32;C:\Documents and Settings\belle1\Desktop\lgram-0.01\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/TP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Documents and Settings\belle1\Desktop\lgram-0.01\win32;C:\Documents and Settings\belle1\Desktop\lgram-0.01\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>false</CompileAsManaged>
+      <AdditionalOptions>/TP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Documents and Settings\belle1\Desktop\lgram-0.01\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\blocks.c" />
+    <ClCompile Include="..\..\error.c" />
+    <ClCompile Include="..\..\input.c" />
+    <ClCompile Include="..\..\lgram.c" />
+    <ClCompile Include="..\..\merge_blocks.c" />
+    <ClCompile Include="..\..\options.c" />
+    <ClCompile Include="..\..\output.c" />
+    <ClCompile Include="..\..\preprocess.c" />
+    <ClCompile Include="..\..\process.c" />
+    <ClCompile Include="..\..\regex.cpp" />
+    <ClCompile Include="..\..\sqlite.c" />
+    <ClCompile Include="..\..\usage.c" />
+    <ClCompile Include="..\..\window.c" />
+    <ClCompile Include="..\getopt.c" />
+    <ClCompile Include="..\mkstemp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\blocks.h" />
+    <ClInclude Include="..\..\include\error.h" />
+    <ClInclude Include="..\..\include\input.h" />
+    <ClInclude Include="..\..\include\lgram.h" />
+    <ClInclude Include="..\..\include\merge_blocks.h" />
+    <ClInclude Include="..\..\include\options.h" />
+    <ClInclude Include="..\..\include\output.h" />
+    <ClInclude Include="..\..\include\preprocess.h" />
+    <ClInclude Include="..\..\include\process.h" />
+    <ClInclude Include="..\..\include\regex.h" />
+    <ClInclude Include="..\..\include\usage.h" />
+    <ClInclude Include="..\..\include\window.h" />
+    <ClInclude Include="..\pcre.h" />
+    <ClInclude Include="..\pcrecpp.h" />
+    <ClInclude Include="..\pcrecpparg.h" />
+    <ClInclude Include="..\pcre_stringpiece.h" />
+    <ClInclude Include="..\sqlite3.h" />
+    <ClInclude Include="..\win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\pcre.dll" />
+    <None Include="..\pcrecpp.dll" />
+    <None Include="..\sqlite3.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\pcre.lib" />
+    <Library Include="..\pcrecpp.lib" />
+    <Library Include="..\sqlite3.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
